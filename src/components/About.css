@@ -1,0 +1,27 @@
+.about-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.aboutDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-section h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.about-section p {
+  max-width: 800px;
+  line-height: 1.6;
+  color: #ccc;
+}
+.toggle-btn {
+  color: #6ab04c;
+  cursor: pointer;
+}
+.toggle-btn:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,19 @@
+.background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+.particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: red;
+  border-radius: 50%;
+  animation: move 4s linear forwards;
+}
+@keyframes move {
+  from { transform: translate(var(--start-x), var(--start-y)); opacity: 1; }
+  to { transform: translate(var(--end-x), var(--end-y)); opacity: 0; }
+}

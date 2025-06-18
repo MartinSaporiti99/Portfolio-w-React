@@ -1,0 +1,24 @@
+@import './components/Navbar.css';
+@import './components/Header.css';
+@import './components/About.css';
+@import './components/Projects.css';
+@import './components/ContactForm.css';
+@import './components/ParticlesBackground.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #121212;
+  color: #eee;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
