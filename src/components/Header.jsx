@@ -4,7 +4,7 @@ import "./Header.css";
 export default function Header({ onContact, onDownload }) {
   return (
     <section id="presentacionSec" className="header-section">
-      <h3>Hola 🤗, soy</h3>
+      <h3>Hola 👋, soy</h3>
       <h1 className="rainbow-text">
         <span className="word">Martín</span>
         <br></br>
@@ -21,8 +21,9 @@ export default function Header({ onContact, onDownload }) {
             href="https://github.com/MartinSaporiti99"
             target="_blank"
             rel="noreferrer"
+            className="iconButton"
           >
-            GitHub
+            <i className="bi bi-github" style={{ fontSize: "2rem" }}></i>
           </a>
         </li>
         <li>
@@ -31,7 +32,7 @@ export default function Header({ onContact, onDownload }) {
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn
+            <i className="bi bi-linkedin" style={{ fontSize: "2rem" }}></i>
           </a>
         </li>
       </ul>

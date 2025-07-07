@@ -18,10 +18,7 @@
   line-height: 1.6;
   color: #ccc;
 }
-.toggle-btn {
-  color: #6ab04c;
-  cursor: pointer;
-}
+
 .toggle-btn:hover {
   text-decoration: underline;
 }

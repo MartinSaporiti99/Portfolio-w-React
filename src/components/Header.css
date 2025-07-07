@@ -1,15 +1,32 @@
-.header-section {
+.header-section { 
   text-align: center;
   padding: 120px 20px;
 }
+
 .rainbow-text {
-  display: inline-block;       
-  background: linear-gradient(90deg, #ff0066, #ffdd00, #00ff99, #0066ff);
+display: inline-block;
+  font-size: 7.5rem;
+  background: linear-gradient(
+    90deg,
+   #950f21,
+   #ff2f2f,
+   #ff9f1c,
+   #ff2f2f,
+   #950f21
+    );
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 7.5rem;
-  text-align: center;
+  animation: wave-red 6s ease-in-out infinite;
 }
+
+
+@keyframes wave-red {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+
 .rainbow-text br {
   display: block;
   content: "";
@@ -22,14 +39,14 @@
   margin: 0 10px;
   padding: 10px 20px;
   border: none;
-  background: #6ab04c;
+  background: #ff9f1c;
   color: white;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 4px;
 }
 .header-buttons button:hover {
-  background: #58a341;
+  background: #ff2f2f;
 }
 .social-links {
   list-style: none;
@@ -39,6 +56,12 @@
   margin-top: 20px;
 }
 .social-links a {
-  color: white;
+  color: #eef5db;
   font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.social-links a:hover{
+  color: #f21a1a;
+  
 }
