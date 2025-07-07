@@ -12,7 +12,7 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #121212;
+  background: #011627;
   color: #eef5db;
   min-height: 100vh;
 }
@@ -21,4 +21,13 @@ a {
 }
 ul {
   list-style: none;
+}
+
+.lineSeparator{
+  
+    border: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 100px;
+
 }

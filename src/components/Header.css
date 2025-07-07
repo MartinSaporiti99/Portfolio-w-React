@@ -1,6 +1,6 @@
 .header-section { 
   text-align: center;
-  padding: 120px 20px;
+  padding: 120px 20px 0px 20px;
 }
 
 .rainbow-text {
@@ -35,7 +35,7 @@ display: inline-block;
 .header-buttons{
   margin-top: 1rem;
 }
-.header-buttons button {
+.buttonHeader{
   margin: 0 10px;
   padding: 10px 20px;
   border: none;
@@ -44,9 +44,15 @@ display: inline-block;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 4px;
+  transition: transform 0.5s ease;
 }
-.header-buttons button:hover {
+.buttonHeader:hover {
   background: #ff2f2f;
+  transform: scale(1.2);
+  
+}
+.buttonHeader i {
+  margin-right: 0.5em;
 }
 .social-links {
   list-style: none;
@@ -64,4 +70,13 @@ display: inline-block;
 .social-links a:hover{
   color: #f21a1a;
   
+}
+
+.lineHeader{
+  
+    border: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin: 200px 100px;
+
 }

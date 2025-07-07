@@ -12,8 +12,14 @@ export default function Header({ onContact, onDownload }) {
       </h1>
       <h3>Estudiante de Programación 💻</h3>
       <div className="header-buttons">
-        <button onClick={onContact}>Contáctame</button>
-        <button onClick={onDownload}>Descargar CV</button>
+        <button onClick={onContact} className="buttonHeader">
+          <i className="bi bi-send-fill"></i>
+          Contáctame
+        </button>
+        <button onClick={onDownload} className="buttonHeader">
+          <i class="bi bi-download"></i>
+          Descargar CV
+        </button>
       </div>
       <ul className="social-links">
         <li>
@@ -36,6 +42,7 @@ export default function Header({ onContact, onDownload }) {
           </a>
         </li>
       </ul>
+      <hr className="lineHeader"></hr>
     </section>
   );
 }

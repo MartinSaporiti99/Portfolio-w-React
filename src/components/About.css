@@ -22,3 +22,13 @@
 .toggle-btn:hover {
   text-decoration: underline;
 }
+
+.lineAbout{
+    border: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin: 200px 100px 0;
+}
+
+
+

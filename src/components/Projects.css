@@ -25,9 +25,10 @@
 }
 .project-card a {
   margin-top: 10px;
-  color: #6ab04c;
+  color: #ff9f1c;
   text-decoration: none;
 }
 .project-card a:hover {
   text-decoration: underline;
+  color: #ff2f2f;
 }

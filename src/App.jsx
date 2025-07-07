@@ -5,6 +5,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import ParticlesBackground from "./components/ParticlesBackground";
+import { Footer } from "./components/Footer";
 import "./App.css";
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
       <div ref={contactRef}>
         <ContactForm />
       </div>
+      <Footer />
     </>
   );
 }

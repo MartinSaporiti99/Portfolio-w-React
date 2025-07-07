@@ -25,7 +25,9 @@ export default function ContactForm() {
   return (
     <section id="contactameSec" className="contact-section">
       <div className="contact-wrapper">
-        <h2>Contactactame !</h2>
+        <div>
+          <h2>Contactactame !</h2>
+        </div>
         <form onSubmit={handleSubmit} className="contact-form">
           <input
             name="name"
@@ -57,6 +59,7 @@ export default function ContactForm() {
           )}
         </form>
       </div>
+      <hr className="lineContact"></hr>
     </section>
   );
 }
