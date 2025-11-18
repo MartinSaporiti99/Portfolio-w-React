@@ -1,34 +1,18 @@
 import "./Footer.css";
+import { useLanguage } from "../context/LanguageContext";
 
 export const Footer = () => {
+  const { t } = useLanguage();
+
   return (
-    <>
-      <section id="despedidaSec">
-        <div className="despedida">
-          <h2>Gracias por visitar mi portfolio!</h2>
-          <a className="haciaAContacto">Contactame</a>
-          <p>O tambien puedes contactarme a través de:</p>
-          <ul className="ulBotonesAbajo">
-            <li>
-              <a
-                href="https://github.com/MartinSaporiti99"
-                className="linkContacto"
-              >
-                <i className="bi bi-github" style={{ fontSize: "2rem" }}></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/mart%C3%ADn-saporiti-566433238/"
-                className="linkContacto"
-              >
-                <i className="bi bi-linkedin" style={{ fontSize: "2rem" }}></i>
-              </a>
-            </li>
-          </ul>
-          <h3>Hecho con ❤️ por Martin Saporiti.</h3>
+    <footer className="footer-simple">
+      <div className="footer-content-simple">
+        <div className="footer-text">
+          <span>
+            © {new Date().getFullYear()} Martín Saporiti. {t.footer.madeWith}
+          </span>
         </div>
-      </section>
-    </>
+      </div>
+    </footer>
   );
 };

@@ -23,11 +23,4 @@ ul {
   list-style: none;
 }
 
-.lineSeparator{
-  
-    border: 0;
-    height: 2px;
-    background-color: #ccc;
-    margin: 20px 100px;
 
-}

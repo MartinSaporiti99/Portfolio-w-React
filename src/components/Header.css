@@ -9,9 +9,9 @@ display: inline-block;
   background: linear-gradient(
     90deg,
    #950f21,
-   #ff2f2f,
-   #ff9f1c,
-   #ff2f2f,
+   #e53e3e,
+   #c53030,
+   #e53e3e,
    #950f21
     );
   background-size: 200% 100%;
@@ -39,7 +39,7 @@ display: inline-block;
   margin: 0 10px;
   padding: 10px 20px;
   border: none;
-  background: #ff9f1c;
+  background: #e53e3e;
   color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -72,11 +72,113 @@ display: inline-block;
   
 }
 
-.lineHeader{
-  
-    border: 0;
-    height: 2px;
-    background-color: #ccc;
-    margin: 200px 100px;
+.typewriter-header {
+  min-height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
 
+.typewriter-text-header {
+  color: #eef5db;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cursor-header {
+  color: #e53e3e;
+  font-weight: bold;
+  font-size: 1.2em;
+  animation: blink-header 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink-header {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.lineHeader{
+  border: 0;
+  height: 2px;
+  background-color: #ccc;
+  margin: 200px 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-section {
+    padding: 100px 20px 0px 20px;
+  }
+  
+  .rainbow-text {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-section {
+    padding: 80px 15px 0px 15px;
+  }
+  
+  .rainbow-text {
+    font-size: 4rem;
+  }
+  
+  .typewriter-header {
+    font-size: 0.95rem;
+    min-height: 2rem;
+  }
+  
+  .buttonHeader {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 0 8px;
+  }
+  
+  .social-links {
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .social-links a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section {
+    padding: 60px 10px 0px 10px;
+  }
+  
+  .rainbow-text {
+    font-size: 2.8rem;
+  }
+  
+  .typewriter-header {
+    font-size: 0.85rem;
+  }
+  
+  .header-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .buttonHeader {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .social-links {
+    gap: 20px;
+  }
 }

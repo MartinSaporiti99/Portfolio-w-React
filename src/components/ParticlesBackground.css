@@ -1,19 +1,136 @@
 .background {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   z-index: -1;
   overflow: hidden;
+  pointer-events: none;
+  
+  background: 
+    radial-gradient(ellipse at top, rgba(15, 25, 50, 0.8) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, rgba(5, 10, 25, 0.9) 0%, transparent 50%),
+    linear-gradient(180deg, #000511 0%, #001122 50%, #000811 100%);
 }
+
 .particle {
   position: absolute;
-  width: 4px; height: 4px;
-  background: red;
   border-radius: 50%;
-  animation: move 4s linear forwards;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  
+  background: radial-gradient(circle, #ff4444 0%, #cc2222 70%, transparent 100%);
+  box-shadow: 
+    0 0 8px rgba(255, 68, 68, 0.8),
+    0 0 16px rgba(255, 68, 68, 0.4),
+    inset 0 0 4px rgba(255, 100, 100, 0.6);
 }
-@keyframes move {
-  from { transform: translate(var(--start-x), var(--start-y)); opacity: 1; }
-  to { transform: translate(var(--end-x), var(--end-y)); opacity: 0; }
+
+.particle:nth-child(3n) {
+  background: radial-gradient(circle, #ff6666 0%, #dd3333 70%, transparent 100%);
+  box-shadow: 
+    0 0 8px rgba(255, 102, 102, 0.6),
+    0 0 16px rgba(255, 102, 102, 0.3);
+  animation: twinkle 3.2s ease-in-out infinite alternate;
+}
+
+.particle:nth-child(5n) {
+  background: radial-gradient(circle, #ff2222 0%, #aa1111 70%, transparent 100%);
+  box-shadow: 
+    0 0 10px rgba(255, 34, 34, 0.8),
+    0 0 20px rgba(255, 34, 34, 0.4);
+  animation: drift 5s ease-in-out infinite;
+}
+
+.particle:nth-child(7n) {
+  background: radial-gradient(circle, #ff5555 0%, #bb2222 70%, transparent 100%);
+  box-shadow: 
+    0 0 6px rgba(255, 85, 85, 0.5),
+    0 0 12px rgba(255, 85, 85, 0.25);
+  animation: twinkle 2.8s ease-in-out infinite alternate;
+}
+
+.particle:nth-child(11n) {
+  background: radial-gradient(circle, #ff7777 0%, #cc4444 70%, transparent 100%);
+  box-shadow: 
+    0 0 4px rgba(255, 119, 119, 0.4),
+    0 0 8px rgba(255, 119, 119, 0.2);
+  animation: drift 4.2s ease-in-out infinite alternate;
+}
+
+.particle:nth-child(13n) {
+  background: radial-gradient(circle, #ff3333 0%, #990000 80%, transparent 100%);
+  box-shadow: 
+    0 0 3px rgba(255, 51, 51, 0.3),
+    0 0 6px rgba(255, 51, 51, 0.15);
+  opacity: 0.7;
+}
+
+@keyframes twinkle {
+  0% {
+    filter: brightness(0.8);
+  }
+  50% {
+    filter: brightness(1.3);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes drift {
+  0% {
+    filter: brightness(0.9) blur(0px);
+  }
+  33% {
+    filter: brightness(1.2) blur(0.2px);
+  }
+  66% {
+    filter: brightness(0.7) blur(0px);
+  }
+  100% {
+    filter: brightness(1) blur(0.1px);
+  }
+}
+
+@media (max-width: 768px) {
+  .particle {
+    box-shadow: 0 0 4px rgba(255, 68, 68, 0.6); 
+  }
+  
+  .particle:nth-child(3n),
+  .particle:nth-child(5n),
+  .particle:nth-child(7n) {
+    animation: none; 
+  }
+}
+
+@media (max-width: 480px) {
+  .background {
+    background: linear-gradient(180deg, #000511 0%, #001122 50%, #000811 100%);
+  }
+  
+  .particle {
+    box-shadow: 0 0 3px rgba(255, 68, 68, 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle:nth-child(3n),
+  .particle:nth-child(5n),
+  .particle:nth-child(7n) {
+    animation: none; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .particle {
+    box-shadow: 
+      0 0 10px rgba(255, 68, 68, 0.9),
+      0 0 20px rgba(255, 68, 68, 0.5),
+      0 0 30px rgba(255, 68, 68, 0.2),
+      inset 0 0 6px rgba(255, 100, 100, 0.7);
+  }
 }
