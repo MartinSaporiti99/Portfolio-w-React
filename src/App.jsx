@@ -15,7 +15,14 @@ export default function App() {
 
   const scrollToContact = () =>
     contactRef.current.scrollIntoView({ behavior: "smooth" });
-  const downloadCV = () => window.open("/descargas/cv.pdf");
+  const downloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/cv/MARTIN-SAPORITI-DESARROLLADOR-WEB.pdf";
+    link.download = "Martin_Saporiti_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <LanguageProvider>
