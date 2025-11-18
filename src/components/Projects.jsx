@@ -21,7 +21,7 @@ export default function Projects() {
       githubLink: "https://github.com/TP-UTN-GRUPO1/TP-Front",
     },
     {
-      title: "TheFrogGames BackEnd 2.0",
+      title: "TheFrogGames BackEnd V2.0",
       descriptionKey: "project3",
       technologies: ["C#", ".NET", "Azure", "GitHub Actions", "SQLServer"],
       githubLink: "https://github.com/TP-UTN-GRUPO1/TheFrogGames",
