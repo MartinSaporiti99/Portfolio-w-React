@@ -23,9 +23,24 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("sending");
     emailjs
-      .send("service_dhafka1", "template_9qwu5ad", formData)
-      .then(() => setStatus("success"))
-      .catch(() => setStatus("idle"));
+      .send("service_dhafka1", "template_9qwu5ad", {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: "martinsaporiti7@gmail.com",
+      })
+      .then(() => {
+        setStatus("success");
+        setFormData({ name: "", subject: "", email: "", message: "" });
+        setTimeout(() => {
+          setStatus("idle");
+        }, 4000);
+      })
+      .catch((error) => {
+        console.error("Error enviando email:", error);
+        setStatus("idle");
+      });
   };
 
   return (

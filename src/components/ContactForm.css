@@ -282,29 +282,40 @@
 .success-message {
   background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
   color: #011627;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.3);
-  animation: successSlideIn 0.5s ease-out;
+  box-shadow: 0 4px 15px rgba(86, 171, 47, 0.3);
+  animation: successSlideIn 0.4s ease-out, successFadeOut 0.5s ease-out 3.5s forwards;
 }
 
 @keyframes successSlideIn {
   from {
-    transform: translateY(20px) scale(0.9);
+    transform: translateY(10px);
     opacity: 0;
   }
   to {
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
+@keyframes successFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
 .success-icon {
-  font-size: 1.5rem;
-  margin-right: 10px;
-  animation: celebrateRotate 0.6s ease-in-out;
+  font-size: 1.2rem;
+  margin-right: 8px;
+  animation: celebrateRotate 0.5s ease-in-out;
 }
 
 @keyframes celebrateRotate {
@@ -316,7 +327,8 @@
 .success-message p {
   margin: 0;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  display: inline;
 }
 
 .lineContact {
