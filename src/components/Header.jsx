@@ -69,7 +69,7 @@ export default function Header({ onContact, onDownload }) {
         </li>
         <li>
           <a
-            href="https://linkedin.com/in/martin-saporiti-566433238/"
+            href="https://www.linkedin.com/in/saporitimartin/"
             target="_blank"
             rel="noreferrer"
           >

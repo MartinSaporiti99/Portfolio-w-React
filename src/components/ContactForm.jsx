@@ -195,7 +195,7 @@ export default function ContactForm() {
                   <i className="bi bi-github"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/mart%C3%ADn-saporiti-566433238/"
+                  href="https://www.linkedin.com/in/saporitimartin/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon"
