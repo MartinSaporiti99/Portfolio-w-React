@@ -26,6 +26,12 @@ export default function Projects() {
       technologies: ["C#", ".NET", "Azure", "GitHub Actions", "SQLServer"],
       githubLink: "https://github.com/TP-UTN-GRUPO1/TheFrogGames",
     },
+    {
+      title: "Gestor De Tickets",
+      descriptionKey: "project4",
+      technologies: ["Angular", "TypeScript", "CSS", "Bootstrap"],
+      githubLink: "https://github.com/MartinSaporiti99/Gestion-de-Tickets",
+    },
   ];
 
   return (

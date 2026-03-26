@@ -51,6 +51,10 @@ export const translations = {
         description:
           "Migracion del backend a .NET, deploy en Azure, creacion de Secret Keys, coneccion con API's externas",
       },
+      project4: {
+        description:
+          "Aplicación de gestión de tickets desarrollada con Angular y TypeScript, utilizando CSS y Bootstrap para un diseño moderno y responsivo",
+      },
     },
     skills: {
       title: "Habilidades",
@@ -125,6 +129,10 @@ export const translations = {
       project3: {
         description:
           "Backend migration to .NET, Azure deployment, Secret Keys creation, external APIs connection",
+      },
+      project4: {
+        description:
+          "Ticket management application developed with Angular and TypeScript, using CSS and Bootstrap for a modern and responsive design",
       },
     },
     skills: {
