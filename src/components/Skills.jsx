@@ -23,7 +23,16 @@ export default function Skills() {
     },
     frontend: {
       icon: <i className="bi bi-palette"></i>,
-      skills: ["React", "JavaScript", "HTML5", "CSS3", "Vite", "Bootstrap"],
+      skills: [
+        "React",
+        "Angular",
+        "TypeScript",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Vite",
+        "Bootstrap",
+      ],
     },
     tools: {
       icon: <i className="bi bi-tools"></i>,
